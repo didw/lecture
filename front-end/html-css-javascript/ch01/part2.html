@@ -10,9 +10,12 @@
 	}
 	label {
 		width: 180px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: right;
 	}
-	label text {
-		
+	label checkbox {
+		width:auto;
 	}
 	</style>
 </head>
@@ -52,9 +55,13 @@
 	<fieldset>
 		<legend>Your indicators</legend>
 		<label for="height">Height:</label>
-		Short<input type="range" min="0" max="100" step="5" value="50" id="height" name="height">Tall<br>
+		<label for="height">Short</label>
+		<input type="range" min="0" max="100" step="5" value="50" id="height" name="height">
+		<label for="height">Tall</label><br>
 		<label for="salary">Salary:</label>
-		Poor<input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary">Rich<br>
+		<label for="salary">Poor</label>
+		<input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary">
+		<label for="salary">Rich</label><br>
 	</fieldset>
 	<fieldset>
 		<legend>Your Contact Information</legend>
@@ -65,9 +72,12 @@
 		<label for="address">Address:</label>
 		<textarea rows="2" id="address" name="address"></textarea><br>
 		<label for="contact">Method to contact you</label>
-		<input type="checkbox" id="contact" name="contact" value="email">Email
-		<input type="checkbox" id="contact" name="contact" value="Whatsapp">Whatsapp
-		<input type="checkbox" id="contact" name="contact" value="in-app chat">In-app chat<chat>
+		<input type="checkbox" id="contact" name="contact" value="email">
+		<label>Email</label>
+		<input type="checkbox" id="contact" name="contact" value="Whatsapp">
+		<label>Whatsapp</label>
+		<input type="checkbox" id="contact" name="contact" value="in-app chat">
+		<label>In-app chat</label>
 	</fieldset>
 	<input type="submit" value="Send">
 </form>
