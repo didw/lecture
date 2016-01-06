@@ -21,6 +21,8 @@
 	.low  { width:50px; text-align:center; vertical-align:top; color:white; background:brown;}
 	.high { width:50px; text-align:center; vertical-align:top; color:white; background:purple;}
 	.box  { width:auto; }
+	label:hover { font-size:25px }
+	input:hover { font-size:25px }
 	</style>
 </head>
 <body>
@@ -31,7 +33,7 @@
 		<label for="avatar">Your image:</label>
 		<input type="file" id="avatar" name="avatar" required><br>
 		<label>Image preview:</label>
-		<img id="preview"><br>
+		<img id="preview" width="100"><br>
 	</fieldset>
 	<fieldset>
 		<legend>Your General Details</legend>
@@ -60,11 +62,11 @@
 	</fieldset>
 	<fieldset>
 		<legend>Your indicators</legend>
-		<label for="height">Height:</label>
+		<label for="range">Height:</label>
 		<label class="low" for="height">Short</label>
 		<input type="range" min="0" max="100" step="5" value="50" id="height" name="height">
 		<label class="high" for="height">Tall</label><br>
-		<label for="salary">Salary:</label>
+		<label for="range">Salary:</label>
 		<label class="low" for="salary">Poor</label>
 		<input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary">
 		<label class="high" for="salary">Rich</label><br>
@@ -88,4 +90,5 @@
 	<input type="submit" value="Send">
 </form>
 </body>
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </html>
