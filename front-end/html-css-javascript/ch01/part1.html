@@ -8,14 +8,14 @@
 	<fieldset>
 		<legend>Your Face </legend>
 		<label for="avatar">Your image:</label>
-		<input type="file" id="avatar" name="avatar" required><br>
+		<input type="file" id="avatar" name="avatar" required/><br>
 		<label for="preview">Image preview:</label>
-		<img id="preview"><br>
+		<img id="preview" src="#avatar"/><br>
 	</fieldset>
 	<fieldset>
 		<legend>Your General Details</legend>
 		<label for="name">Name:</label>
-		<input type="text" name="fullname" required><br>
+		<input type="text" id="name" name="name" required><br>
 		<label for="gender">Gender:</label>
 		<input type="radio" name="gender" value="male" required>Male
 		<input type="radio" name="gender" value="female">Female<br>
@@ -52,9 +52,10 @@
 		<textarea rows="2" id="address" name="address"></textarea><br>
 		<label for="contact">Method to contact you</label>
 		<input type="checkbox" id="contact" name="contact" value="email">Email
-		<input type="checkbox" id="contact" name="contact" value="Whatsapp">Whatsapp
-		<input type="checkbox" id="contact" name="contact" value="in-app chat">In-app chat<chat>
+		<input type="checkbox" id="contact" name="contact" value="what">Whatsapp
+		<input type="checkbox" id="contact" name="contact" value="chat">In-app chat
 	</fieldset>
 	<input type="submit" value="Send">
 </form>
 </body>
+</html>

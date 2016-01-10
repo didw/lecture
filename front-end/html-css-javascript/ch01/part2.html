@@ -1,5 +1,5 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<style>
 	fieldset {
@@ -14,9 +14,13 @@
 		vertical-align: top;
 		text-align: right;
 	}
-	label checkbox {
-		width:auto;
+	textarea {
+		width:360px;
+		height:50px;
 	}
+	.low  { width:50px; text-align:center; vertical-align:top; color:white; background:brown;}
+	.high { width:50px; text-align:center; vertical-align:top; color:white; background:purple;}
+	.box  { width:auto; }
 	</style>
 </head>
 <body>
@@ -26,7 +30,7 @@
 		<legend>Your Face </legend>
 		<label for="avatar">Your image:</label>
 		<input type="file" id="avatar" name="avatar" required><br>
-		<label for="preview">Image preview:</label>
+		<label>Image preview:</label>
 		<img id="preview"><br>
 	</fieldset>
 	<fieldset>
@@ -34,8 +38,10 @@
 		<label for="name">Name:</label>
 		<input type="text" name="fullname" required><br>
 		<label for="gender">Gender:</label>
-		<input type="radio" name="gender" value="male" required>Male
-		<input type="radio" name="gender" value="female">Female<br>
+		<input type="radio" id="male" name="gender" value="male" required>
+		<label for="male" class="box">Male</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female" class="box">Female</label><br>
 		<label for="age">Age:</label>
 		<input type="number" min="0" max="99" step="1" value="18" id="age" name="age" required><br>
 		<label for="birthday">Date of birth:</label>
@@ -55,30 +61,31 @@
 	<fieldset>
 		<legend>Your indicators</legend>
 		<label for="height">Height:</label>
-		<label for="height">Short</label>
+		<label class="low" for="height">Short</label>
 		<input type="range" min="0" max="100" step="5" value="50" id="height" name="height">
-		<label for="height">Tall</label><br>
+		<label class="high" for="height">Tall</label><br>
 		<label for="salary">Salary:</label>
-		<label for="salary">Poor</label>
+		<label class="low" for="salary">Poor</label>
 		<input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary">
-		<label for="salary">Rich</label><br>
+		<label class="high" for="salary">Rich</label><br>
 	</fieldset>
 	<fieldset>
 		<legend>Your Contact Information</legend>
-		<label for="email">Email:</label>
-		<input type="email" id="email" name="email" required><br>
+		<label for="Email">Email:</label>
+		<input type="email" id="Email" name="email" required><br>
 		<label for="mobile">Mobile:</label>
 		<input type="tel" id="mobile" name="mobile"><br>
 		<label for="address">Address:</label>
-		<textarea rows="2" id="address" name="address"></textarea><br>
+		<textarea id="address" name="address"></textarea><br>
 		<label for="contact">Method to contact you</label>
-		<input type="checkbox" id="contact" name="contact" value="email">
-		<label>Email</label>
-		<input type="checkbox" id="contact" name="contact" value="Whatsapp">
-		<label>Whatsapp</label>
-		<input type="checkbox" id="contact" name="contact" value="in-app chat">
-		<label>In-app chat</label>
+		<input type="checkbox" id="email" name="contact" value="email">
+		<label for="email" class="box">Email</label>
+		<input type="checkbox" id="whatsapp" name="contact" value="Whatsapp">
+		<label for="whatsapp" class="box">Whatsapp</label>
+		<input type="checkbox" id="chat" name="contact" value="in-app chat">
+		<label for="chat" class="box">In-app chat</label>
 	</fieldset>
 	<input type="submit" value="Send">
 </form>
 </body>
+</html>
