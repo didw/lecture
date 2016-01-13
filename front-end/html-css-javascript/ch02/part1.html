@@ -12,8 +12,6 @@
 	var colormap = ["Black", "Blue", "Brown", "Gold", "Gray", "Green", "Lime", "Magenta", "Olive", "Purple", "Red", "White", "Yellow"];
 	var message1 = "I am thinking of one of these colors\n\n" + colormap.join() + "\n\nWhat color am I thinking of?";
 	var message2 = "Sorry, I don't recognize your color.\n\nPlease try again.";
-	var message3 = "Sorry, your guess is not correct!\n\nHint: your color is alphabetically higher than mine.\n\nPlease Try again.";
-	var message4 = "Sorry, your guess is not correct!\n\nHint: your color is alphabetically lower than mine.\n\nPlease Try again.";
 	do_game();
 	function do_game() {
 		var random_number = Math.random() * colormap.length;
@@ -21,6 +19,10 @@
 		target = colormap[random_number_integer];
 		alert(target);
 		while (!finished) {
+			if (guesses > 10) {
+				alert("too many guesses.. \n\nStop continue.")
+				break;
+			}
 			guess_input_colour = prompt(message1);
 			guesses += 1;
 			if (guess_input_colour == target)
