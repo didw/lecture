@@ -66,5 +66,17 @@ corr <- function(directory, threshold = 0) {
 
 	## Return a numeric vector of correlations
 	## NOTE: Do not round the result!
-	
+	my_list <- {}
+	idx <- 1
+	for (id in 1:332) {
+		filename <- getfilename(directory, id)
+		data <- read.csv(filename, head=TRUE)
+		criterion <- !is.na(data$sulfate)&!is.na(data$nitrate)
+		data_sul <- data$sulfate[criterion]
+		data_nit <- data$nitrate[criterion]
+		if (length(data_sul) > threshold) {
+			my_list <- append(my_list, cor(data_sul, data_nit))
+		}
+	}
+	my_list
 }
