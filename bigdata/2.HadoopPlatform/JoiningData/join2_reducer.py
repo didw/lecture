@@ -22,9 +22,9 @@ import sys
 #  San Diego Supercomputer Center copyright
 # --------------------------------------------------------------------------
 
-prev_word = "  "                #initialize previous word  to blank string
+prev_word = " "                #initialize previous word  to blank string
 
-channels_to_output = "" #an empty list to hold dates for a given word
+channels_to_output = " " #an empty list to hold dates for a given word
 line_cnt           = 0  #count input lines
 curr_word_total_cnt = 0
 
@@ -48,10 +48,10 @@ for line in sys.stdin:
 	#now write out the join result, but not for the first line input
         # -----------------------
         if line_cnt>1:
-            if channels_to_output == 'ABC':
+            if channels_to_output == "ABC":
                 print('{0} {1}'.format(prev_word, curr_word_total_cnt))
             #now reset lists
-            channels_to_output = ""
+            channels_to_output = " "
             curr_word_total_cnt = 0
         prev_word = curr_word  #set up previous word for the next set of input lines
 	
@@ -60,14 +60,14 @@ for line in sys.stdin:
     # if current value is in channel, then append current show's channel
     # else add count
     # ---------------------------------------------------------------
-    if (value_in == 'ABC'):
+    if value_in == "ABC":
         channels_to_output = value_in
     else:
-        curr_word_total_cnt += int(value_in)  # if the value field was just the total count then its
+        curr_word_total_cnt = curr_word_total_cnt + int(value_in)  # if the value field was just the total count then its
                                            #the first (and only) item in this list
 
 # ---------------------------------------------------------------
 # now write out the LAST join result
 # ---------------------------------------------------------------
-if channels_to_output == 'ABC':
+if channels_to_output == "ABC":
     print('{0} {1}'.format(prev_word, curr_word_total_cnt))
