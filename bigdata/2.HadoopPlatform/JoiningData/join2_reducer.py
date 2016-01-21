@@ -24,7 +24,7 @@ import sys
 
 prev_word = "  "                #initialize previous word  to blank string
 
-channels_to_output = [] #an empty list to hold dates for a given word
+channels_to_output = "" #an empty list to hold dates for a given word
 line_cnt           = 0  #count input lines
 curr_word_total_cnt = 0
 
@@ -62,7 +62,7 @@ for line in sys.stdin:
     # ---------------------------------------------------------------
     if (value_in == 'ABC'):
         channels_to_output = value_in
-    else:
+    elif value_in[0:1] >= '0' and value_in[0:1] <= '9':
         curr_word_total_cnt += int(value_in)  # if the value field was just the total count then its
                                            #the first (and only) item in this list
 
