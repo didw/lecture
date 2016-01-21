@@ -62,7 +62,7 @@ for line in sys.stdin:
     # ---------------------------------------------------------------
     if (value_in == 'ABC'):
         channels_to_output = value_in
-    elif value_in[0:1] >= '0' and value_in[0:1] <= '9':
+    else:
         curr_word_total_cnt += int(value_in)  # if the value field was just the total count then its
                                            #the first (and only) item in this list
 

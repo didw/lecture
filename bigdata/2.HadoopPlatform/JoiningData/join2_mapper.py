@@ -22,7 +22,8 @@ for line in sys.stdin:
     words    = line.split(",")   #split line, into key and value, returns a list
     key_in   = words[0]
     value_in = words[1]
-    print( '%s\t%s' % (key_in, value_in) )  #print a string tab and string
+    if 	value_in == 'ABC' or (value_in[0] >= '0' and value_in[0] <= '9'):
+        print( '%s\t%s' % (key_in, value_in) )  #print a string tab and string
 
 #Note that Hadoop expects a tab to separate key value
 #but this program assumes the input file has a ',' separating key value
