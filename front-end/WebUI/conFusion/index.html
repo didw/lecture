@@ -95,7 +95,7 @@
         <div>
           <p style="padding:40px;"></p>
           <a href="#ReserveTable">
-            <button type="Reserve Table" class="btn btn-warning">Reserve Table</button>
+            <button type="ReserveTable" class="btn btn-warning">Reserve Table</button>
           </a>
         </div>
       </div>
@@ -116,7 +116,7 @@
             </a>
           </div>
           <div class="media-body">
-            <h2 class="media-heading">Uthappizza<span class="label label-danger">Hot</span><span class="badge">$4.99</span></h2>
+            <h2 class="media-heading">Uthappizza <span class="label label-danger">Hot</span> <span class="badge">$4.99</span></h2>
             <p>A unique combination of Indian Uthappam (pancake) and
               Italian pizza, topped with Cerignola olives, ripe vine
               cherry tomatoes, Vidalia onion, Guntur chillies and
@@ -128,14 +128,10 @@
     </div>
 
     <div class="row row-content">
-      <div class="col-xs-12 col-sm-3 col-sm-push-9">
-        <p style="padding:20px;"></p>
-        <h3 align=center>This Month's Promotions</h3>
-      </div>
-      <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+      <div class="col-xs-12 col-sm-9 col-sm-push-3">
         <div class="media">
           <div class="media-body">
-            <h2 class="media-heading">Weekend Grand Buffet<span class="label label-danger">New</span></h2>
+            <h2 class="media-heading">Weekend Grand Buffet <span class="label label-danger">New</span></h2>
             <p>Featuring mouthwatering combinations with a choice of 
               five different salads, six enticing appetizers, six main 
               entrees and five choicest desserts. Free flowing bubbly 
@@ -148,6 +144,10 @@
             </a>
           </div>
         </div>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-sm-pull-9">
+        <p style="padding:20px;"></p>
+        <h3 align=center>This Month's Promotions</h3>
       </div>
     </div>
 
@@ -177,19 +177,19 @@
       </div>
     </div>
 
-    <div class="row row-content">
+    <div id="ReserveTable" class="row row-content">
       <div class="col-xs-12 col-sm-2">
         <p style="padding:10px"></p>
-        <label>Reserve Tables</label>
+        <label><h3>Reserve a Table</h3></label>
       </div>
       <div class="col-xs-12 col-sm-10">
         <form class="form-horizontal" role="form">
           <div class="form-group">
             <div class="col-xs-2">
-              <label>Number of Table</label>
+              <label>Number of Guests</label>
             </div>
             <div class="col-xs-10">
-              <label class="radio-inline"><input type="radio" name="resNum" id="resNum1" value="resNum1" checked> 1</label>
+              <label class="radio-inline"><input type="radio" name="resNum" id="resNum1" value="resNum1"> 1</label>
               <label class="radio-inline"><input type="radio" name="resNum" id="resNum2" value="resNum2"> 2</label>
               <label class="radio-inline"><input type="radio" name="resNum" id="resNum3" value="resNum3"> 3</label>
               <label class="radio-inline"><input type="radio" name="resNum" id="resNum4" value="resNum4"> 4</label>
@@ -197,13 +197,13 @@
               <label class="radio-inline"><input type="radio" name="resNum" id="resNum6" value="resNum6"> 6</label>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group has-feedback">
             <div class="col-xs-2">
               <label>Date and Times</label>
             </div>
             <div class="col-xs-10">
-              <input type="date">
-              <input type="time">
+              <input type="date" placeholder="Date" class="glyphicon glyphicon-calendar">&nbsp;&nbsp;&nbsp;
+              <input type="time" placeholder="Time" class="glyphicon glyphicon-time">
             </div>
           </div>
           <div class="form-group">
@@ -216,7 +216,7 @@
           <div class="form-group">
             <div class="alert alert-warning alert-dismissible" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <strong>Warning:</strong> Please <a href="#Call">Call</a> us to reserve for more than six guests.
+              <strong>Warning:</strong> Please <a href="tel:+85212345678" class="alert-link">Call</a> us to reserve for more than six guests.
             </div>
           </div>
         </form>
@@ -242,7 +242,7 @@
             121, Clear Water Bay Road<br>
             Clear Water Bay, Kowloon<br>
             HONG KONG<br>
-            <i class="fa fa-phone" id="Call"></i> : +852 1234 5678<br>
+            <i class="fa fa-phone"></i> : +852 1234 5678<br>
             <i class="fa fa-fax"></i> : +852 8765 4321<br>
             <i class="fa fa-envelope"></i> : <a href="mailto:confusion@food.net">confusion@food.net</a>
           </address>
