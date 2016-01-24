@@ -4,3 +4,9 @@ https://www.coursera.org/learn/r-programming/peer/tNy8H/programming-assignment-2
 - apply
 - tapply: group(table?)
 - vapply: verified
+
+
+### assignment
+https://github.com/didw/ProgrammingAssignment2
+
+
