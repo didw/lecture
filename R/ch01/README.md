@@ -3,6 +3,6 @@
 #### Run R interpreter
     install.packages("swirl")
 ** I had to install libcurl4-openssl-dev before install swirl **
-    library("swirl")
-
+    library(swirl)
+    install_from_swirl("R Programming")
 
