@@ -8,5 +8,7 @@ myData = [
 [-37.914517,145.1303881, 'Monash College, Wellington Rd, Clayton VIC 3168, Australia'],
 [53.2948229,69.4047872, 'Kokshetau 020000, Kazakhstan'],
 [40.7127837,-74.0059413, 'New York, NY, USA'],
-[52.2869741,104.3050183, 'Irkutsk, Irkutsk Oblast, Russia']
+[52.2869741,104.3050183, 'Irkutsk, Irkutsk Oblast, Russia'],
+[37.2439666,131.8597232, 'Dokdo-ri, Ulleung-eup, Ulleung-gun'],
+[28.6794861,115.9247409, 'Jeju Island Korean Cuisine （Shengtu South Road）, Donghu, Nanchang, Jiangxi, China, 330000']
 ];
