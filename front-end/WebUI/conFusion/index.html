@@ -9,11 +9,11 @@
   content must come *after* these tags -->
   <title>Ristorante Con Fusion</title>
   <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="css/mystyles.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="css/mystyles.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,7 +60,7 @@
           <li><a href="contactus.html">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a data-toggle="modal" data-target="#loginModal">
+          <li><a id="loginLink">
             <span class="glyphicon glyphicon-log-in"></span> Login</a>
           </li>
         </ul>
@@ -138,27 +138,21 @@
                 </div>
               </div>
             </div>
-            <div class="form-group has-feedback">
-              <div class="col-xs-2">
-                <label>Date and Time</label>
-              </div>
-              <div class="col-xs-4">
-                <div class='input-group date' id='datetimepicker1'>
-                  <input type='text' class="form-control" placeholder="Date" />
-                  <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-                </div>
-              </div>
-              <div class="col-xs-4">
-                <div class='input-group date' id='datetimepicker2'>
-                  <input type='text' class="form-control" placeholder="Time" />
-                  <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-time"></span>
-                  </span>
-                </div>
-              </div>
+            
+            <div class="form-group">
+            <div class="col-xs-2">
+              <label>Date and Times</label>
             </div>
+            <div class="col-xs-5 has-feedback">
+              <input type="date" placeholder="Date" class="form-control">
+              <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+            </div>
+            <div class="col-xs-5 has-feedback">
+              <input type="time" placeholder="Time" class="form-control">
+              <span class="glyphicon glyphicon-time form-control-feedback"></span>
+            </div>
+          </div>
+            
             <div class="form-group">
               <div class="col-xs-2">
               </div>
@@ -194,7 +188,7 @@
         </div>
         <div class="col-xs-12 col-sm-2">
           <p style="padding:40px;"></p>
-          <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal" href="#reserveform">
+          <a type="button" class="btn btn-warning btn-block" id="reserveButton">
             Reserve Table</a>
         </div>
       </div>
@@ -258,17 +252,87 @@
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
+          <div class="btn-group" id="carouselButtons">
+            <button class="btn btn-danger btn-xs" id="carousel-pause">
+              <span class="glyphicon glyphicon-pause" aira-hidden="true"></span>
+            </button>
+            <button class="btn btn-danger btn-xs" id="carousel-play">
+              <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  
+  <footer class="row-footer">
+    <div class="container">
+      <div class="row">             
+        <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+        <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-5">
+          <h5>Our Address</h5>
+          <address>
+            121, Clear Water Bay Road<br>
+            Clear Water Bay, Kowloon<br>
+            HONG KONG<br>
+            <i class="fa fa-phone"></i>: +852 1234 5678<br>
+            <i class="fa fa-fax"></i>: +852 8765 4321<br>
+            <i class="fa fa-envelope"></i>: 
+            <a href="mailto:confusion@food.net">confusion@food.net</a>
+          </address>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="nav navbar-nav" style="padding: 40px 10px;">
+            <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+          </div>
+        </div>
+      <div class="col-xs-12">
+      <p style="padding:10px;"></p>
+      <p align=center>© Copyright 2015 Ristorante Con Fusion</p>
+      </div>
+      </div>
+    </div>
   </footer>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $("#mycarousel").carousel( { interval: 2000 } );
+      
+      $("#carousel-pause").click(function(){
+        $("#mycarousel").carousel('pause');
+      });
+      
+      $("#carousel-play").click(function(){
+        $("#mycarousel").carousel('cycle');
+      });
+      
+      $("#loginLink").click(function(){
+        $('#loginModal').modal('toggle');
+      });
+      
+      $("#reserveButton").click(function(){
+        $('#reserveModal').modal('toggle');
+      });
+      
+    });
+  </script>
 </body>
 
 </html>
