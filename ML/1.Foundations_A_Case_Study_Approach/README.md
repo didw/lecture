@@ -25,8 +25,11 @@ Graphlab
     # Install your licensed copy of GraphLab Create
     pip install --upgrade --no-cache-dir https://get.dato.com/GraphLab-Create/1.8.1/yangjy0113@gmail.com/26DB-29DB-1E31-9A21-6473-FA09-717D-2A93/GraphLab-Create-License.tar.gz
 
-### Assignment
+### Chapter
 
 1 Introduction
 2 Regression
 3 Classification
+4 Document retrieval
+5 Product recommend
+6 Deep Learning
