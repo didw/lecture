@@ -19,6 +19,7 @@
 %% Initialization
 clear ; close all; clc
 
+
 %% =============== Part 1: Loading and Visualizing Data ================
 %  We start the exercise by first loading and visualizing the dataset. 
 %  The following code will load the dataset into your environment and plot
@@ -110,6 +111,7 @@ visualizeBoundary(X, y, model);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
 
 %% =============== Part 6: Visualizing Dataset 3 ================
 %  The following code will load the next dataset into your environment and 
