@@ -1,0 +1,7 @@
+easy1.py
+easy2.py
+setup.py
+myeasy.egg-info/PKG-INFO
+myeasy.egg-info/SOURCES.txt
+myeasy.egg-info/dependency_links.txt
+myeasy.egg-info/top_level.txt
